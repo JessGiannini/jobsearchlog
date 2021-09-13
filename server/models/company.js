@@ -17,7 +17,7 @@ const companySchema = new Schema ({
         type: Schema.Types.ObjectId,
         ref: 'Job'
       }
-  ]
+  ],
 });
 
 const Company = model('Company', companySchema);

@@ -8,12 +8,7 @@
         "remote": "no",
         "jobFound": "LinkedIn",
         "salary": 100000,
-        "submitted": "yes",
-        "contact": {
-            "name": "Melissa Ivey",
-            "email": "melissa@moo.com",
-            "phone": "408 562 1578"
-        }
+        "submitted": "yes"
     },
     {
         "jobTitle": "Back End Developer",
@@ -24,11 +19,6 @@
         "remote": "yes",
         "jobFound": "Indeed",
         "salary": 150000,
-        "submitted": "yes",
-        "contact": {
-            "name": "Michael Schmidt",
-            "email": "michael@moo.com",
-            "phone": "(402) 562-1578"
-        }
+        "submitted": "yes"
     }
 ]

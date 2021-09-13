@@ -1,4 +1,4 @@
-const { User, Company, Job } = require('../models');
+const { User, Company, Job, Contact } = require('../models');
 
 const resolvers = {
     Query: {
@@ -15,11 +15,17 @@ const resolvers = {
             return Company.find().populate("jobs")
         },
         job: async(parent, {ID}) => {
-            return Job.findOne({ID}).populate("company")
+            return Job.findOne({ID}).populate("company", "contact")
         },
         jobs: async() => {
-            return Job.find().populate("company")
+            return Job.find().populate("company", "contact")
         },
+        contact: async(parent, {ID}) => {
+            return Contact.findOne({ID}).populate("jobs")
+        },
+        contacts: async() => {
+            return Contact.find().populate("jobs")
+        }
     }
 };
 

@@ -23,6 +23,14 @@ const typeDefs = gql`
         jobFound: String
         salary: String
         submitted: Boolean!
+        contact: Contact
+    }
+    type Contact {
+        _id: ID!
+        name: String!
+        email: String!
+        phone: String
+        jobs: Job
     }
     type Query {
     user(_id: ID!): User
@@ -31,6 +39,8 @@ const typeDefs = gql`
     companies: [Company]
     job(_id: ID!): Job
     jobs: [Job]
+    contact(_id: ID!): Contact
+    contacts: [Contact]
   }
 `;
 
