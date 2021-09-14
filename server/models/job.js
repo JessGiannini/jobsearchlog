@@ -47,11 +47,12 @@ const jobSchema = new Schema ({
       ref: 'Company'
     },
   contact: 
+  
       {
         type: Schema.Types.ObjectId,
         ref: 'Contact'
       }
-  
+    
 });
 
 const Job = model('Job', jobSchema);

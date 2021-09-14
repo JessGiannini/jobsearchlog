@@ -17,10 +17,13 @@ const contactSchema = new Schema ({
         match: [/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/, "Must match a valid phone number!"
         ],
     }, 
-     jobs: {
+     jobs: 
+     [
+       {
       type: Schema.Types.ObjectId,
       ref: 'Job'
     }
+  ]
 });
 
 const Contact = model('Contact', contactSchema);

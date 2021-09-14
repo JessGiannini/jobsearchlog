@@ -15,10 +15,10 @@ const resolvers = {
             return Company.find().populate("jobs")
         },
         job: async(parent, {ID}) => {
-            return Job.findOne({ID}).populate("company", "contact")
+            return Job.findOne({ID}).populate("company").populate({path: "contact", populate: "contact"})
         },
         jobs: async() => {
-            return Job.find().populate("company", "contact")
+            return Job.find().populate("company").populate({path: "contact", populate: "contact"})
         },
         contact: async(parent, {ID}) => {
             return Contact.findOne({ID}).populate("jobs")

@@ -27,11 +27,15 @@ db.once('open', async () => {
     // randomly add each contact to a job
     const tempContact = contact[Math.floor(Math.random() * contact.length)];
     newJob.contact = tempContact._id;
-    await newJob.save();
+  console.log("====contact info====", newJob.contact)  
+  console.log("===tempory contact===", tempContact)  
+  await newJob.save();
     //taking the contact and pushing it to the job, two way street with referencing
-    tempContact.jobs = newJob._id;
+    tempContact.jobs.push(newJob._id);
+    console.log("===tempCOntactJObs===", tempContact.jobs)
     await tempContact.save();
   }
+
     
     console.log('\n!!!!all done!!!!!');
     process.exit(0);
