@@ -42,6 +42,14 @@ const typeDefs = gql`
     contact(_id: ID!): Contact
     contacts: [Contact]
   }
+  type Mutation {
+    addCompany(name: String!, description: String!) : Company
+    addJob(jobTitle: String!, description: String!, experience: String!, city: String!, state: String!, remote: Boolean, jobFound: String, salary: String, submitted: Boolean!, companyId: ID ): Job
+    addContact( name: String!, email: String!, phone: String, jobId: ID!): Contact
+    deleteCompany(companyId: ID!) : Company
+    deleteJob(jobId: ID!) : Job
+    deleteContact(contactId: ID!) : Contact
+  }
 `;
 
 module.exports = typeDefs;
