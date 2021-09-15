@@ -1,11 +1,33 @@
+import React from 'react';
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+} from '@apollo/client';
 import logo from './logo.svg';
+import { setContext } from '@apollo/client/link/context';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
+
+import CompanyPage from './pages/company/CompanyPage';
+
+
+const client = new ApolloClient({uri: "/graphql", cache: new InMemoryCache()});
 
 function App() {
   return (
+    <ApolloProvider client={client}>
+    <Router>
     <div>
-       
+    <Route exact path="/company/:name">
+      <CompanyPage />
+    </Route>
+
     </div>
+    </Router>
+    </ApolloProvider>
+
   );
 }
 
