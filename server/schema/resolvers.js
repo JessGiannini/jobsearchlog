@@ -63,6 +63,9 @@ const resolvers = {
         );    
       return contact
     },
+    addNote: async (parent, { title, content}) => {
+      return Notes.create({ title, content })
+    },
     deleteCompany: async (parent, { companyId }) => {
       return Company.findOneAndDelete({ _id: companyId });
     },
@@ -72,6 +75,9 @@ const resolvers = {
     deleteContact: async (parent, { contactId }) => {
       return Contact.findOneAndDelete({ _id: contactId });
     },
+    deleteNote: async (parent, { noteId }) => {
+      return Notes.findOneAndDelete({ _id: noteId });
+    }
 
     // removeSkill: async (parent, { profileId, skill }) => {
     //   return Profile.findOneAndUpdate(
