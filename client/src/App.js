@@ -11,23 +11,27 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 
 import CompanyPage from './pages/company/CompanyPage';
+import Home from './pages/home/Home';
 
-
-const client = new ApolloClient({uri: "/graphql", cache: new InMemoryCache()});
+const client = new ApolloClient({
+  uri: '/graphql',
+  cache: new InMemoryCache(),
+});
 
 function App() {
   return (
     <ApolloProvider client={client}>
-    <Router>
-    <div>
-    <Route exact path="/company/:name">
-      <CompanyPage />
-    </Route>
-
-    </div>
-    </Router>
+      <Router>
+        <div>
+          <Route exact path="/company/:name">
+            <CompanyPage />
+          </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+        </div>
+      </Router>
     </ApolloProvider>
-
   );
 }
 
