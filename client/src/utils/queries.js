@@ -164,3 +164,22 @@ export const QUERY_CONTACTS = gql`
     }
   }
 `;
+
+export const QUERY_NOTE = gql`
+  query Note($_id: ID!) {
+  note(_id: $_id){
+    title
+    content
+  }
+}
+`;
+
+export const QUERY_NOTES = gql`
+  query Notes {
+  notes{
+    _id
+    title
+    content
+  }
+}
+`;

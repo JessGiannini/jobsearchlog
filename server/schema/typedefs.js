@@ -32,6 +32,11 @@ const typeDefs = gql`
     phone: String
     jobs: [Job]
   }
+  type Notes {
+    _id: ID!
+    title: String
+    content: String
+  }
   type Query {
     user(_id: ID!): User
     users: [User]
@@ -41,6 +46,8 @@ const typeDefs = gql`
     jobs: [Job]
     contact(_id: ID!): Contact
     contacts: [Contact]
+    note(_id: ID!): Notes
+    notes: [Notes]
   }
   type Mutation {
     addCompany(name: String!, description: String!) : Company

@@ -1,9 +1,10 @@
 const db = require('../config/connections');
-const { User, Company, Job, Contact } = require('../models');
+const { User, Company, Job, Contact, Notes } = require('../models');
 const userSeeds = require('./user.json');
 const companySeeds = require('./company.json');
 const jobSeeds = require('./job.json');
 const contactSeeds = require('./contact.json');
+const notesSeeds = require('./notes.json');
 
 
 db.once('open', async () => {
@@ -12,8 +13,10 @@ db.once('open', async () => {
     await Company.deleteMany({});
     await Job.deleteMany({});
     await Contact.deleteMany({});
+    await Notes.deleteMany({});
 
     await User.create(userSeeds);
+    await Notes.create(notesSeeds);
     const company = await Company.create(companySeeds);
     const job = await Job.create(jobSeeds);
     const contact = await Contact.create(contactSeeds);

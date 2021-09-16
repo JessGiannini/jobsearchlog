@@ -1,4 +1,4 @@
-const { User, Company, Job, Contact } = require('../models');
+const { User, Company, Job, Contact, Notes } = require('../models');
 
 const resolvers = {
   Query: {
@@ -33,6 +33,12 @@ const resolvers = {
     contacts: async () => {
       return Contact.find().populate('jobs');
     },
+    note: async (parent, { ID }) => {
+      return Notes.findOne({ ID });
+    },
+    notes: async () => {
+      return Notes.find();
+    }
   },
     Mutation: {
     addCompany: async (parent, { name, description }) => {
