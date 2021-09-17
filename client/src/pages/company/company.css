@@ -1,0 +1,31 @@
+companyPageContainer {
+    display: grid;
+  grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header header header"
+}
+
+companyHeader{
+    text-align: center;
+    grid-area: header;
+}
+
+
+companyCardContainer{
+    display: grid;
+}
+
+companyCardHeader{
+    text-align: center;
+    font-size: 50px;
+    justify-content: center;
+    padding: 10px;
+    margin: auto;
+}
+
+companyCardDescription{
+    text-align: left;
+    font-size: 35px;
+
+}

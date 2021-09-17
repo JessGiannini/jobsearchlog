@@ -1,6 +1,6 @@
 import React from 'react';
 
-function form() {
+function FormJob() {
     return (
         <div>
             
@@ -8,4 +8,4 @@ function form() {
     )
 }
 
-export default form;
+export default FormJob;

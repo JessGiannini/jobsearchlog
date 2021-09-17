@@ -6,6 +6,9 @@ import { useQuery } from '@apollo/client';
 import { QUERY_COMPANY } from '../../utils/queries.js';
 import Card from '../../components/Card';
 
+import './company.css'
+
+
 function CompanyPage() {
   const { name } = useParams();
 
@@ -20,7 +23,7 @@ function CompanyPage() {
     return <div>Loading...</div>;
   }
   return (
-    <div>
+    <div className="companyPageContainer">
       <div className="companyHeader">COMPANY{company.name}</div>
       <div>{company.description}</div>
       <div>
