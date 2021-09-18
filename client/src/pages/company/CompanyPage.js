@@ -6,7 +6,7 @@ import { useQuery } from '@apollo/client';
 import { QUERY_COMPANY } from '../../utils/queries.js';
 import Card from '../../components/Card';
 
-import './company.css'
+import './company.css';
 
 
 function CompanyPage() {

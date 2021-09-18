@@ -3,10 +3,10 @@ import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
-  createHttpLink,
+  // createHttpLink,
 } from '@apollo/client';
-import logo from './logo.svg';
-import { setContext } from '@apollo/client/link/context';
+// import logo from './logo.svg';
+// import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 

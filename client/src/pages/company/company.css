@@ -1,4 +1,4 @@
-companyPageContainer {
+.companyPageContainer {
     display: grid;
   grid-template-columns: 50px 50px 50px 50px;
   grid-template-rows: auto;
@@ -6,17 +6,17 @@ companyPageContainer {
     "header header header header"
 }
 
-companyHeader{
+.companyHeader{
     text-align: center;
     grid-area: header;
 }
 
 
-companyCardContainer{
+.companyCardContainer{
     display: grid;
 }
 
-companyCardHeader{
+.companyCardHeader{
     text-align: center;
     font-size: 50px;
     justify-content: center;
@@ -24,7 +24,7 @@ companyCardHeader{
     margin: auto;
 }
 
-companyCardDescription{
+.companyCardDescription{
     text-align: left;
     font-size: 35px;
 
