@@ -1,6 +1,6 @@
 import React from 'react'
 
-function stats() {
+function Stats() {
     return (
         <div>
             <section>STATISTICS</section>
@@ -8,4 +8,4 @@ function stats() {
     )
 }
 
-export default stats
+export default Stats

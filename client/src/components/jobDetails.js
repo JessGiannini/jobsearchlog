@@ -1,6 +1,6 @@
 import React from 'react'
 
-function jobDetails() {
+function JobDetails() {
     return (
         <div>
             
@@ -8,4 +8,4 @@ function jobDetails() {
     )
 }
 
-export default jobDetails
+export default JobDetails

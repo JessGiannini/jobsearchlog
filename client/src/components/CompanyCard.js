@@ -1,11 +1,12 @@
 import React from 'react';
+import '../pages/company/company.css'
 
 function CompanyCard(props) {
   return (
-    <div>
-      <h3>{props.name}</h3>
-      <p>{props.description}</p>
-      <p>Jobs Available: {props.jobsLength}</p>
+    <div className="companyCardContainer">
+      <div className="companyCardHeader">{props.name}</div>
+      <div className="companyCardDescription">{props.description}</div>
+      <div className="companyCardAvailableJobs">Jobs Available: {props.jobsLength}</div>
     </div>
   );
 }
