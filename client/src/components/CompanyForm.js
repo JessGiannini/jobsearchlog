@@ -33,7 +33,7 @@ function CompanyForm(props) {
 
   return (
     <form onSubmit={handleFormSubmit}>
-      <label>Name:</label>
+      <label>Company Name:</label>
       <input type="text" name="name" onChange={handleChange} />
       <label>Description:</label>
       <input type="text" name="description" onChange={handleChange} />
