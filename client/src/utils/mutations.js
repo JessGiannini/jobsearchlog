@@ -1,4 +1,4 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client';
 
 export const ADD_COMPANY = gql`
   mutation addCompany($name: String!, $description: String!) {
@@ -81,17 +81,14 @@ export const DELETE_JOB = gql`
 `;
 
 export const DELETE_COMPANY = gql`
-
-mutation deleteCompany($_id: ID!) {
-  deleteCompany(companyId: $_id) {
-    _id
+  mutation deleteCompany($_id: ID!) {
+    deleteCompany(companyId: $_id) {
+      _id
+    }
   }
-}
-}
 `;
 
 export const DELETE_NOTE = gql`
-
   mutation deleteNote($_id: ID!) {
     deleteNote(noteId: $_id) {
       _id

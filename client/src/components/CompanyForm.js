@@ -30,4 +30,16 @@ function CompanyForm(props) {
 
     console.log(company);
   };
+
+  return (
+    <form onSubmit={handleFormSubmit}>
+      <label>Name:</label>
+      <input type="text" name="name" onChange={handleChange} />
+      <label>Description:</label>
+      <input type="text" name="description" onChange={handleChange} />
+      <input type="submit" value="Submit" />
+    </form>
+  );
 }
+
+export default CompanyForm;
