@@ -14,6 +14,7 @@ import CompanyPage from './pages/company/CompanyPage';
 import Home from './pages/home/Home';
 import CompanyForm from './components/CompanyForm';
 import JobForm from './components/JobForm';
+import ContactForm from './components/ContactForm';
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -36,6 +37,9 @@ function App() {
           </Route>
           <Route exact path="/add/job">
             <JobForm />
+          </Route>
+          <Route exact path="/add/contact">
+            <ContactForm />
           </Route>
         </div>
       </Router>
