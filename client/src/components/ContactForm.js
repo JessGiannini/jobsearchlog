@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { ADD_COMPANY } from '../utils/mutations';
+import { ADD_CONTACT } from '../utils/mutations';
 
-function CompanyForm(props) {
-  const [company, setCompany] = useState({ name: '', description: '' });
-  const [addCompany, { error }] = useMutation(ADD_COMPANY);
+function ContactForm(props) {
+  const [contact, setContact] = useState({ name: '', email: '', phone: '' });
+  const [addContact, { error }] = useMutation(ADD_CONTACT);
 
   const handleFormSubmit = async (event) => {
     console.log('HandleSubmit function');
     event.preventDefault();
-    console.log(company);
+    console.log(contact);
     try {
-      const { data } = await addCompany({
+      const { data } = await addContact({
         variables: {
-          ...company,
+          ...contact,
         },
       });
       console.log(`\n DATA: ${data}`);
@@ -24,22 +24,25 @@ function CompanyForm(props) {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-
     console.log(event.target);
-    setCompany({ ...company, [name]: value });
+    
+    setContact({ ...contact, [name]: value });
 
-    console.log(company);
   };
+
 
   return (
     <form onSubmit={handleFormSubmit}>
-      <label>Company Name:</label>
+      <label>Contact Name:</label>
       <input type="text" name="name" onChange={handleChange} />
-      <label>Description:</label>
-      <input type="text" name="description" onChange={handleChange} />
+      <label>Email:</label>
+      <input type="text" name="email" onChange={handleChange} />
+      <label>Phone:</label>
+      <input type="text" name="phone" onChange={handleChange} />
+
       <input type="submit" value="Submit" />
     </form>
   );
-}
+};
 
-export default CompanyForm;
+export default ContactForm;
