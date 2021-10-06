@@ -3,7 +3,7 @@ import { useMutation } from '@apollo/client';
 import { ADD_JOB } from '../utils/mutations';
 
 function JobForm(props) {
-  const [job, setJob] = useState({ name: '', description: '' });
+  const [job, setJob] = useState({ jobTitle: '', description: '', experience: '',  });
   const [addJob, { error }] = useMutation(ADD_JOB);
 
   const handleFormSubmit = async (event) => {
@@ -35,7 +35,7 @@ function JobForm(props) {
             <form onSubmit={handleFormSubmit}>
                 <label for="JobTitle">
                 Job Title:
-             <input id="JobTitle" type="text" name="jobtitle" onChange={handleChange}/>
+             <input id="JobTitle" type="text" name="jobTitle" onChange={handleChange}/>
                </label><br></br>
                                
                 <label for="Description">

@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
 import { QUERY_COMPANY } from '../../utils/queries.js';
-import Card from '../../components/Card';
+import Card from '../../components/JobCard';
 
 import './company.css';
 
