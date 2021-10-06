@@ -11,12 +11,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 
 import CompanyPage from './pages/company/CompanyPage';
-<<<<<<< companyForm
 import Home from './pages/home/home';
 import CompanyForm from './components/CompanyForm';
-=======
-import Home from './pages/home/Home';
->>>>>>> main
 
 const client = new ApolloClient({
   uri: '/graphql',
